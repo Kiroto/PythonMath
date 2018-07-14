@@ -67,4 +67,14 @@ class mathe:
     if y == True:
       return math.atan(x)
     return math.tan(x)
+  # Geometric functions
+  # Regular figures
+  # Where x is a list containing the lenghts of all the sides.
+  def perim(self, x):
+    return sum(x)
   
+  # Where x is the perimeter (or list of lengths) and y is the apothem
+  def area(self, x, y):
+    if istype(x, list):
+      x = sum(x)
+    return x * y / 2
