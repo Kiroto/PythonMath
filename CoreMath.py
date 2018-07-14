@@ -4,7 +4,8 @@ import math
 class Mathify:
   # Don't need to construct anything yet.
   def __init__(self):
-    pass
+    pee = math.pi
+    ee = math.e
   # Basic 6  
   # Ad as in Add
   def ad(self, x, y=0):
@@ -35,22 +36,34 @@ class Mathify:
     if y == 10:
       return math.log10(x)
     return math.log(x, y)
-  # Trigonometric functions
+  # Conversions
+  # Degrees to radians
+  def degtorad(self, x):
+    return x * 180 / pee
+  
+  # Radians to degrees
+  def radtodeg(self, x):
+    return x * pee / 180
+  
+  # Trigonometric functions. All the input values should be converted to radians.
   # Adding a second parameter as True returns the arc functions.
   # Si as in Sine
   def si(self, x, y=False):
+    x = degtorad(x)
     if y == True:
       return math.asin(x)
     return math.sin(x)
   
   # Co as in Cosine
   def co(self, x, y=False):
+    x = degtorad(x)
     if y == True:
       return math.acos(x)
     return math.cos(x)
   
   # Ta as in Tangent
   def ta(self, x, y=False):
+    x = degtorad(x)
     if y == True:
       return math.atan(x)
     return math.tan(x)
