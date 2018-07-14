@@ -35,3 +35,16 @@ class Mathify:
     if y == 10:
       return math.log10(x)
     return math.log(x, y)
+  # Trigonometric functions
+  # Si as in Sine
+  def si(self, x):
+    return math.sin(x)
+  
+  # Co as in Cosine
+  def co(self, x):
+    return math.cos(x)
+  
+  # Ta as in Tangent
+  def ta(self, x):
+    return math.tan(x)
+  
