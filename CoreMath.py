@@ -69,12 +69,19 @@ class mathe:
     return math.tan(x)
   # Geometric functions
   # Regular figures
+  # Where x is the length of a side (of length of the circumradius) and y is the number of sides.
+  def get_apothem(self, x, y, radius=False):
+    if radius:
+      return x * co(y / 180)
+    return (x / 2 * (ta(y / 180)))
+  
   # Where x is a list containing the lenghts of all the sides.
-  def perim(self, x):
+  def get_perimeter(self, x):
     return sum(x)
   
-  # Where x is the perimeter (or list of lengths) and y is the apothem
-  def area(self, x, y):
+  # Where x is the perimeter (or list of lengths) and y is the number of sides
+  def get_area(self, x, y):
     if istype(x, list):
       x = sum(x)
-    return x * y / 2
+    apoth = get_apothem(x/y, y)
+    return x * apoth / 2
