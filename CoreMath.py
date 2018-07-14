@@ -36,15 +36,22 @@ class Mathify:
       return math.log10(x)
     return math.log(x, y)
   # Trigonometric functions
+  # Adding a second parameter as True returns the arc functions.
   # Si as in Sine
-  def si(self, x):
+  def si(self, x, y=False):
+    if y == True:
+      return math.asin(x)
     return math.sin(x)
   
   # Co as in Cosine
-  def co(self, x):
+  def co(self, x, y=False):
+    if y == True:
+      return math.acos(x)
     return math.cos(x)
   
   # Ta as in Tangent
-  def ta(self, x):
+  def ta(self, x, y=False):
+    if y == True:
+      return math.atan(x)
     return math.tan(x)
   
