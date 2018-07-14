@@ -1,7 +1,7 @@
 # This will be the program to be ran
 import math
 
-class Mathify:
+class mathe:
   # Don't need to construct anything yet.
   def __init__(self):
     pee = math.pi
