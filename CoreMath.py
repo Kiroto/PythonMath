@@ -1,5 +1,5 @@
 # This will be the program to be ran
-import Math
+import math
 
 class Mathify:
   # Don't need to construct anything yet.
@@ -16,7 +16,7 @@ class Mathify:
   
   # Ra as in Raise
   def ra(self, x, y=1):
-    return x ** y
+    return math.pow(x, y)
   
   # Su as in Substract
   def su(self, x, y=0):
@@ -28,4 +28,10 @@ class Mathify:
   
   # Ro as in Root
   def ro(self, x, y=1):
-    return x ** (1 / y)
+    return math.pow(x, (1 / y))
+
+  # Lo as in Logarithm
+  def lo(self, x, y=10):
+    if y == 10:
+      return math.log10(x)
+    return math.log(x, y)
